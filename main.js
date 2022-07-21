@@ -88,8 +88,7 @@ var sitesList = [
 const links = document.getElementsByTagName('a');
 // iterate through the anchor elements and set href attribute for each to a random website from the array
 for (let i = 0; i < links.length; i++) {
-    links[i].setAttribute("href", randomURL())
-    links[i].innerText = ('Distraction');
+    links[i].setAttribute("href", randomURL());
 }
 
 // helper function to select random element from array
