@@ -2,16 +2,14 @@
     "manifest_version": 3,
     "name": "distractify",
     "version": "1.0",
-    "content_scripts": [
-        {
-            "matches": ["https://*/*"],
-            "js": ["./main.js"]
-        }
-    ],
     "action": {
-        "default_popup": "popup.html"
+        "default_title": "Click to distractify"
     },
     "icons": {
         "32": "distract.png"
+    },
+    "permissions": ["activeTab", "scripting"],
+    "background": {
+        "service_worker": "background.js"
     }
 }
