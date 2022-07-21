@@ -84,14 +84,18 @@ var sitesList = [
     "https://findtheinvisiblecow.com/"
 ];
 
-// select all anchor links on page and save to a variable
-const links = document.getElementsByTagName('a');
-// iterate through the anchor elements and set href attribute for each to a random website from the array
-for (let i = 0; i < links.length; i++) {
-    links[i].setAttribute("href", randomURL());
-    console.log(i);
-}
+const toggle = document.getElementById('toggle');
 
+
+function distractify () {
+    // select all anchor links on page and save to a variable
+    const links = document.getElementsByTagName('a');
+    // iterate through the anchor elements and set href attribute for each to a random website from the array
+    for (let i = 0; i < links.length; i++) {
+        links[i].setAttribute("href", randomURL());
+        console.log(i);
+    }
+}
 // helper function to select random element from array
 function randomURL() {
     const index = Math.floor(Math.random() * sitesList.length);
